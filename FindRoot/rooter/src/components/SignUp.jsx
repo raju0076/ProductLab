@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const Signup = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
-  const navigate = useNavigate(); // ✅ Fix here
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -17,7 +17,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8000/users/signup", {
+      const res = await fetch("https://productlab-4.onrender.com/users/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

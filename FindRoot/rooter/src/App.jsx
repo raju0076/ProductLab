@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Signup from "./components/SignUp"; // ✅ Fixed import name and path
+import Signup from "./components/SignUp"; 
 import ErrorBoundary from "./components/ErrorBoundary";
 
 
@@ -17,7 +17,7 @@ const App = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:8000/users/verify", {
+        const res = await fetch("https://productlab-4.onrender.com/users/verify", {
           credentials: "include",
         });
         if (res.ok) {

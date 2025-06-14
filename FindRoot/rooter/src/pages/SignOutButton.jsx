@@ -8,7 +8,7 @@ const SignOutButton = ({ setIsAuthenticated }) => {
 
   const handleSignOut = async () => {
     try {
-      const res = await fetch("http://localhost:8000/users/signout", {
+      const res = await fetch("https://productlab-4.onrender.com/signout", {
         method: "POST",
         credentials: "include",
       });

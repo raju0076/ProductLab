@@ -12,9 +12,10 @@ app.use(express.json())
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173", // ✅ Match your frontend port
+    origin: (origin, callback) => {
+      callback(null, origin); 
+    },
     credentials: true,
-              // ✅ Allow sending cookies
   })
 );
 app.use("/users",userRouter)
